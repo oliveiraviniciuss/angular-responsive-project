@@ -19,7 +19,7 @@ export class AppComponent{
     this.config = {
       itemsPerPage: 5,
       currentPage: 1,
-      totalItems: 31
+      totalItems: 12
     };
   }
 

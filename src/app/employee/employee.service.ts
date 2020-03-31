@@ -9,7 +9,7 @@ import { IEmployee } from './employee.model';
 export class EmployeeService{
     constructor(private http: HttpClient) {}
 
-    public url = 'http://www.mocky.io/v2/5e80a5853000000d006f952d'
+    public url = "http://www.mocky.io/v2/5e8348c83100007100e6459c"
     getEmployees(): Observable<IEmployee[]> {
         console.log(this.http.get<IEmployee[]>(this.url))
         return this.http.get<IEmployee[]>(this.url);
