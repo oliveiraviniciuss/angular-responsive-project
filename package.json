@@ -3,12 +3,17 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
+    "postinstall": "ng build --aot --prod",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
+  "engines": {
+    "node": "10.13.0",
+    "npm": "6.4.1"
+  }, 
   "private": true,
   "dependencies": {
     "@angular/animations": "~9.0.0",
@@ -23,6 +28,7 @@
     "@angular/platform-browser-dynamic": "~9.0.0",
     "@angular/router": "~9.0.0",
     "bootstrap": "^4.4.1",
+    "express": "^4.17.1",
     "jquery": "^3.2.1",
     "jw-angular-pagination": "^1.1.0",
     "ngx-pagination": "^3.0.1",
