@@ -1,0 +1,141 @@
+<div class='container'>
+    <div class='toolbar-table'>
+        <div class='main-toolbar'>
+            <div class='initial-buttons'>
+                <button mat-button class='logo-button'>
+                    <mat-icon class='logo-icon'>bubble_chart</mat-icon>
+                </button>
+                <div class="vl"></div>
+                <div class='user-security'>
+                    <button class="security-button"> 
+                        <mat-icon  class="security-icon" >security</mat-icon>
+                    </button>
+                    <button class="person-button"> 
+                        <mat-icon class="person-icon" >person</mat-icon>
+                    </button>
+                </div>
+            </div>
+            <div class='search-field'
+                fxHide.lt-md>
+                <mat-form-field>
+                    <input matInput
+                    type="text"
+                    placeholder="Pesquisar..."
+                    formControlName="search">
+                    <mat-icon matSuffix  class="search-icon" >
+                        search
+                    </mat-icon>    
+                </mat-form-field>    
+            </div>
+            
+            <div class='end-buttons'>
+                <div class='new-user-filter-icon' 
+                    fxHide.xs>
+                    <button mat-raised-button (click)="openModal()"  class="filter-button"> 
+                        <mat-icon class="filter-icon" >filter_list</mat-icon>
+                    </button>
+                    <button mat-button class="new-user-button"> 
+                        <mat-icon  class="user-icon" >person</mat-icon>
+                        INCLUIR USUÁRIO
+                    </button> 
+                </div>
+                <button mat-icon-button>
+                    <mat-icon>home</mat-icon>
+                </button>
+                <button mat-icon-button>
+                    <mat-icon>settings</mat-icon>
+                </button>
+                <button mat-icon-button>
+                    <mat-icon>power_settings_new</mat-icon>
+                </button>
+            </div>
+        </div>
+        <div class='body-page'>
+            <table class="table-striped table-hover">
+            <thead class='table-head'>
+                <tr>
+                    <th> </th>
+                    <th>USUÁRIO</th>
+                    <th class="d-none d-sm-table-cell">EMAIL</th>
+                    <th class="d-none d-sm-table-cell">DATA DE INCLUSÃO</th>
+                    <th class="d-none d-sm-table-cell">DATA DE ALTERAÇÃO</th>
+                    <th class="d-none d-sm-table-cell">REGRAS</th>
+                    <th >Status</th>
+                    <th class="action-head d-none d-sm-table-cell">AÇÕES</th>
+                </tr>
+            </thead>
+    
+            <tbody>
+                <tr *ngFor="let employee of employees | paginate: config">
+                    <td><input type="checkbox"></td>  
+                <td>{{employee.user}}</td>
+                <td class="d-none d-sm-table-cell">{{employee.email}}</td>
+                <td class="d-none d-sm-table-cell"> {{employee.inclusion_date}}</td>
+                <td class="d-none d-sm-table-cell"> {{employee.updated_date}}</td>
+                <td class="d-none d-sm-table-cell"> {{employee.rules}}</td>
+                <td class="td-status"> {{employee.status}}</td>
+                <td class="action-td d-none d-sm-table-cell td-action">
+                    <div class='td-buttons'>
+                        <div class='action-buttons'> 
+                            <button mat-icon-button><mat-icon class='action-icon'>delete</mat-icon></button>
+                            <button mat-icon-button><mat-icon class='action-icon'>archive</mat-icon></button>
+                            <button mat-icon-button><mat-icon class='action-icon'>security</mat-icon></button>
+                            <button mat-icon-button><mat-icon class='action-icon'>create</mat-icon></button>
+                        </div>
+                        <div class='more-vert'>
+                            <button mat-icon-button><mat-icon>more_horiz</mat-icon></button>
+                        </div>
+                    </div>
+                </td>
+                
+            </tbody>
+            </table>
+        </div>
+        <div class='pagination-control'>
+            <pagination-controls responsive="true" (pageBoundsCorrection)="pageChanged($event)"
+            (pageChange)="pageChanged($event)"></pagination-controls>  
+        </div>
+    
+    </div>    
+    <div class='footer'>
+        <div class="first-part-footer" >
+            <div class='live-informations' >
+                <mat-icon class='radio-button-icon'>
+                    radio_button_checked
+                </mat-icon>
+                <span>
+                    NO AR
+                </span>
+            </div>
+            <div class='encounter' fxHide.xs>
+                <mat-icon class='tv-icon'>
+                    tv
+                </mat-icon>
+                <span>
+                    ENCONTRO - 10:00
+                </span>
+            </div>
+            <div class='update' fxHide.lt-md>
+                <mat-icon class='update-icon'>
+                    update
+                </mat-icon>
+                <span>
+                    Ultima atualização em 10:28
+                </span>
+            </div>
+        </div>
+        <div class='second-part-footer'>
+            <div class='datetime-footer'>
+                <span class='date-complete'>
+                    Quinta, 30 de maio de 2019
+                </span>
+                
+            </div>
+            <span class='hour' fxHide.xs>
+                //10:30:42
+            </span>
+        </div>
+    </div>      
+</div>
+
+

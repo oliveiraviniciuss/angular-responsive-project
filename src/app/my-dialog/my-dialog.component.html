@@ -1,0 +1,82 @@
+<div class='container'>
+    <div class='filter-header'>
+      <div class='initial'>      
+        <div class='filter-icon'>
+          <mat-icon >filter_list</mat-icon> 
+        </div>
+        <span class='filter'>
+        <h3>FILTROS</h3>
+        </span>
+      </div>
+        <button class='close-button' mat-button (click)="close()">X</button>
+      
+    </div>
+    <div class='select-filters'>
+      <span class='text-inform'>
+        <p>
+        Utilize os filtros abaixo para refinar os resultados da tabela,
+        clique no botão APLICAR para salvar as alterações.
+        </p>
+      </span>
+    </div> 
+    <div class='first-select'>            
+      <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Todas as datas de inclusão
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-expansion-panel-body>
+            <p>Selecione o período desejado</p>
+            <mat-form-field>
+              <input class='date-input' matInput [matDatepicker]="picker1" placeholder="Escolha a data inicial">
+              <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+              <mat-datepicker #picker1></mat-datepicker>
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+              <input matInput [matDatepicker]="picker2" placeholder="Escolha a data final" >
+              <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+              <mat-datepicker #picker2></mat-datepicker>
+            </mat-form-field>
+          </mat-expansion-panel-body>
+      </mat-expansion-panel>
+    </div>
+    <div class='second-select'>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Todas as datas de alteração
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p>Selecione o período desejado</p>
+            <mat-form-field>
+                <input matInput [matDatepicker]="picker3" placeholder="Escolha a data inicial">
+                <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+                <mat-datepicker #picker3></mat-datepicker>
+              </mat-form-field>
+              <br>
+              <mat-form-field>
+                <input matInput [matDatepicker]="picker4" placeholder="Escolha a data final" >
+                <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
+                <mat-datepicker #picker4></mat-datepicker>
+              </mat-form-field>
+          </mat-expansion-panel>
+    </div>
+    <div class='third-select'>      
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Ativos e inativos
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p>Selecione o status desejado</p>
+            <mat-radio-group>
+                <mat-radio-button value="1">Ativo</mat-radio-button>
+                <br>
+                <mat-radio-button value="2">Inativo</mat-radio-button>
+            </mat-radio-group>    
+          </mat-expansion-panel>    
+    </div>
+    <button type="button" (click)='close()' class="btn btn-light" id='apply-button'>APLICAR</button>      
+  </div>

@@ -1,0 +1,80 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0px;
+    overflow: auto;
+        
+}
+
+.filter-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(194, 189, 189);
+    height: 75px;
+
+}
+
+.text-inform{
+    font-family: italic;
+    margin-left:4%;
+}
+
+.select-filters{
+    margin: 3%;
+    overflow-x: auto;
+    padding: 0;
+
+}
+
+#apply-button{
+    border-color: red;
+    color:red;
+    margin: 5%;
+    height: 40%;
+}
+
+
+.third-select .second-select .first-select{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.mat-expansion-panel-content > .mat-expansion-panel-body {
+    padding: 0 !important;
+  }
+
+.mat-expansion-panel-header{
+    padding: 0px !important;
+    margin: 3%;
+}
+
+.mat-form-field{
+    padding: 0px !important;
+}
+
+
+.filter{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+}
+.filter-icon{
+    display: flex;
+    flex-direction: row;
+    padding-right: px;
+}
+
+.initial{
+    display: flex;
+    flex-direction: row;
+    margin-left: 5%;
+    margin-top: 4%;
+    justify-content: space-between;
+    align-self: center;
+}
