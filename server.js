@@ -5,7 +5,7 @@ const app = express();
 app.use(express.static("./dist/angular-project"));
  
 app.get("/*", function(req, res) {
-    res.sendFile("index.html", {root: "dist/<name-on-package.json>/"}
+    res.sendFile("index.html", {root: "dist/angular-project/"}
   );
   });
  

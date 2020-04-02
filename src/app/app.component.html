@@ -57,10 +57,10 @@
                     <th> </th>
                     <th>USUÁRIO</th>
                     <th class="d-none d-sm-table-cell">EMAIL</th>
-                    <th class="d-none d-sm-table-cell">DATA DE INCLUSÃO</th>
-                    <th class="d-none d-sm-table-cell">DATA DE ALTERAÇÃO</th>
+                    <th class="d-none d-sm-table-cell" id="inclusion-date">DATA DE INCLUSÃO</th>
+                    <th class="d-none d-sm-table-cell" id="updated-date">DATA DE ALTERAÇÃO</th>
                     <th class="d-none d-sm-table-cell">REGRAS</th>
-                    <th >Status</th>
+                    <th >STATUS</th>
                     <th class="action-head d-none d-sm-table-cell">AÇÕES</th>
                 </tr>
             </thead>
@@ -70,16 +70,16 @@
                     <td><input type="checkbox"></td>  
                 <td>{{employee.user}}</td>
                 <td class="d-none d-sm-table-cell">{{employee.email}}</td>
-                <td class="d-none d-sm-table-cell"> {{employee.inclusion_date}}</td>
-                <td class="d-none d-sm-table-cell"> {{employee.updated_date}}</td>
+                <td class="d-none d-sm-table-cell" id="inclusion-date"> {{employee.inclusion_date}}</td>
+                <td class="d-none d-sm-table-cell" id="updated-date"> {{employee.updated_date}}</td>
                 <td class="d-none d-sm-table-cell"> {{employee.rules}}</td>
                 <td class="td-status"> {{employee.status}}</td>
                 <td class="action-td d-none d-sm-table-cell td-action">
                     <div class='td-buttons'>
-                        <div class='action-buttons'> 
-                            <button mat-icon-button><mat-icon class='action-icon'>delete</mat-icon></button>
-                            <button mat-icon-button><mat-icon class='action-icon'>archive</mat-icon></button>
-                            <button mat-icon-button><mat-icon class='action-icon'>security</mat-icon></button>
+                        <div class='action-buttons'>
+                            <button mat-icon-button class='button-one'><mat-icon class='action-icon'>delete</mat-icon></button>
+                            <button mat-icon-button class='button-two'><mat-icon class='action-icon'>archive</mat-icon></button>
+                            <button mat-icon-button class='button-three'><mat-icon class='action-icon'>security</mat-icon></button>
                             <button mat-icon-button><mat-icon class='action-icon'>create</mat-icon></button>
                         </div>
                         <div class='more-vert'>

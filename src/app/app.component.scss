@@ -192,7 +192,31 @@ li{
   align-self: center;
 }
 
+@media(max-width: 1300px){
+  .button-one{
+    visibility: hidden;
+    }
+}
+@media(max-width: 1000px){
+  .button-two{
+    visibility: hidden;
+    }
+}
 
+@media(max-width: 800px){
+  .button-three{
+    visibility: hidden;
+    }
+}
+
+@media(max-width: 750px){
+    #inclusion-date{
+       display:none !important;
+       }
+    #updated-date{
+      display: none !important;
+    }
+}
 .action-buttons{ 
   opacity: 0;
 }
@@ -215,7 +239,7 @@ li{
 .action-buttons{
   display:flex;
   flex-direction: row;
-  
+  justify-content: flex-start;
 }
 
 .td-buttons{
